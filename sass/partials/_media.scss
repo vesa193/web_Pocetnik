@@ -1,0 +1,1403 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+@media all and(max-width: 320px) {
+	//header section 
+	.header {
+		height: 600px;
+		padding: 0;
+	}
+	.main-nav {
+		width: 100%;
+		height: 60px;
+		padding: 0 15px;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		@include transition(background, .3s, ease-in-out);
+		&__logoLinxBox {
+			width: 100%;
+			height: 60px;
+		}
+		&__logo {
+			position: relative;
+			width: 60px;
+			height: 50px;
+			@include flexbox();
+			@include align-items(center);
+		}
+		&__icon-menu {
+			position: relative;
+			right: 0%;
+			width: 40px;
+			height: 40px;
+			background: $base-color;
+			@include transition(right, .3s, linear);
+			@include border-radius(4px);
+		}
+		&__hamburger {
+			@include background('../img/menu.svg', center, no-repeat);
+		    width: 40px;
+		    height: 40px;
+		    cursor: pointer;
+		}
+		&__close {
+			@include background('../img/close.svg', center, no-repeat);
+		    display: none;
+		    width: 40px;
+		    height: 40px;
+		    cursor: pointer;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+	
+	.animateIcon {
+		right: 18%;
+		@include transition(right, .3s, linear);
+	}
+
+	.bgdNav {
+    	background: rgba(0, 0, 0, 0.6);
+	}
+
+	.linx {
+		width: 100%;
+		height: 100vh;
+		background: white;
+		padding: 20px 0 0 0;
+		position: fixed;
+		top: 60px;
+		left: 0;
+		z-index: 100;
+		@include flex-direction(column);
+		@include justify-content(stretch);
+		@include align-items(center);
+		@include transition(all, .3s, ease-in-out);
+		@include transform(translate(100%, 0));
+		&__item {
+			width: 100%;
+			margin-bottom: 10px;
+			font-size: 18px;
+			padding: 10px 0 10px 20px;
+			&--current {
+				background: $base-color;
+			}
+		}
+		&__link {
+			width: 100%;
+		}
+	}	
+		.search-btn {
+		    position: absolute;
+		    width: 40px;
+		    top: -50px;
+			right: 6%;
+			z-index: 999;
+			display: none;
+	   		@include justify-content(center);
+	    	@include align-items(center);
+		}
+
+
+	.form-search {
+		width: 100%;
+		height: 60px;
+		&__input {
+			padding: 20px;
+			width: 80%;
+			font-size: 18px;
+		}
+		&__close {
+			margin-right: 0;
+		}	
+	}
+
+	.box_slider {
+		margin-top: 0;
+	}
+	.box_slider .slider {
+	    width: 100%;
+	    height: 400px;
+	    @include flexbox();
+	    @include justify-content(center);
+	    @include align-items(center);
+	    
+	    div {
+	    	h1 {
+	    		font-size: 2.3em;
+	    	}
+	    	h3 {
+	    		font-size: 18px;
+	    		padding: 0 15px;
+	    	}
+	    }
+	}
+	.slick-dots li {
+	    position: relative;
+	    display: inline-block;
+	    width: 30px;
+	    height: 30px;
+	    margin: 0 5px;
+	    padding: 0;
+	    cursor: pointer;
+	    button {
+	    	font-size: 0;
+			line-height: 0;
+			display: block;
+			width: 30px;
+			height: 30px;
+			padding: 5px;
+		    &:before {
+		    	line-height: 30px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 30px;
+				height: 30px;
+				content: "";
+				text-align: center;
+				opacity: .77;
+				color: black;
+			}	
+		}
+	}
+	//discription section
+	.discription {
+		width: 100%;
+		height: auto;
+		@include flexbox();
+		@include flex-direction(column);
+	}
+	.dwrap {
+		&__boxText {
+			width: 100%;
+			height: auto;
+			padding: 0 15px;
+			padding-bottom: 40px;
+			h3 {
+				font-size: $size-h4;
+				margin-bottom: 20px;
+			}
+			p {
+				font-size: $p-mobile;
+				margin-top: 20px;
+			}
+		}
+	}
+	.dboxImg {
+	    position: relative;
+	    width: 100%;
+	    height: auto;
+	    overflow: hidden;
+	}
+
+	//features 
+	.features {
+	    width: 100%;
+	    height: auto;
+	    padding: 0 15px;
+	    h3 {
+	    	font-size: $size-h4;
+	    	margin: 20px 0 40px 0;
+	    }
+	}
+
+	.fFullBox {
+	    width: 100%;
+	    height: auto;
+	    margin: 0;
+	    &__box {
+    		width: 100%;
+    		height: auto;
+    		margin: 0;
+    		@include flexbox();
+    		@include flex-direction(column);
+	    }
+	    &__icon {
+		    position: relative;
+		    width: 30px;
+		    height: 30px;
+		    margin-right: 15px;
+		
+		     i {
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    width: 100%;
+			    height: 100%;
+			    color: #b2dbbd;
+			    font-size: 2em;
+			}
+		}
+		&__discrb {
+		    width: 100%;
+			 h4 {
+			    margin-bottom: 10px;
+			    font-size: 16px;
+			    font-weight: bold;
+			}
+			p {
+				font-size: $p-mobile;
+			}
+		}
+		&__part {
+			width: 100%;
+			margin-bottom: 20px;
+			&:nth-child(6) {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	//tuts section 
+	.tuts {
+		position: relative;
+		width: 100%;
+		height: auto;
+		padding: 0 15px;
+		h3 {
+			font-size: $size-h4;
+			margin: 20px 0 40px 0;
+		}
+	}
+	.tuts-wrap {
+		width: 100%;
+		height: auto;
+		&__tutsBox {
+	    	width: 100%;
+	    	height: auto;
+	    	@include flexbox();
+	    	@include flex-direction(column);
+		}
+		&__tuto {
+		    position: relative;
+		    overflow: hidden;
+		    width: 100%;
+		    height: 290px;
+		    margin: 20px 0;
+		    p {
+		    	font-size: 12px;
+		    }
+		}    
+	} 
+
+	.figure {
+		&__link span {
+		    color: black;
+		    font-weight: 400;
+		    text-transform: uppercase;
+		    font-size: 13px;
+		}
+	}
+
+	//aboutUs section 
+	.aboutUs {
+		h3 {
+			font-size: $size-h4;
+			margin: 20px 0 40px 0;
+		}
+	}
+	.wrapper-about {
+		width: 100%;
+		padding-bottom: 40px;
+		height: auto;
+	}
+
+	.about {
+		@include flexbox();
+		@include flex-direction(column);
+		height: auto;
+
+		&__card {
+			width: 100%;
+			height: 400px;
+			&:nth-child(1) {
+				margin-bottom: 20px;
+				margin-right: 0;
+			}
+			h5 {
+				padding-bottom: 15px;
+			}
+
+			&__mask {
+				p {
+					font-size: $p-mobile;
+				}
+			}
+			&__img--mladen {
+				height: calc(100% - 24%);
+			}	
+			&__icons {
+				width: 100%;
+				@include flexbox();
+				@include justify-content(space-around);
+				font-size: 20px;
+				margin-bottom: 10px;	
+			}
+			&__icon {
+				width: 25px;
+				height: 25px;
+			}		
+		}
+	}
+
+	//contact section
+	.contact {
+	    position: relative;
+	    width: 100%;
+	    height: auto;
+	    padding: 0 15px;
+	    padding-bottom: 40px;
+	    h3 {
+	    	font-size: $size-h4;
+	    }
+	}
+	.contWrap {
+		width: 100%;
+		height: auto;
+		@include flexbox();
+		@include flex-direction(column);
+		&__box {
+			width: 100%;
+			margin: 20px 0;
+		}
+		&__iconBox {
+			width: 100%;
+			height: 100px;
+		}
+		&__link {
+			width: 40px;
+			height: 40px;
+		}
+		&__icon {
+			font-size: 1.5em;
+		}
+		&__text {
+			font-size: $p-mobile;
+		}
+		&__boxForm {
+			width: 100%;
+		}
+		&__form {
+			width: 100%;
+		}
+		&__input {
+			width: 100%;
+			input {
+				width: 100%;
+				font-size: .8em;
+			}
+		}
+		&__mess {
+			width: 100%;
+			font-size: .8em;
+		}
+		&__button {
+			width: 100%;
+		}
+		&__btn {
+			width: 100%;
+			font-size: .8em;
+		}
+
+	}
+
+	//footer section 
+	.footer {
+		height: auto;
+		padding: 40px 15px;
+		&__wrap {
+			width: 100%;
+		}
+		&__box {
+			width: 100%;
+			height: auto;
+			@include flex-direction(column);
+			@include justify-content(space-evenly);
+			@include align-items(center);
+		}
+		&__part {
+			width: 100%;
+			margin-bottom: 20px;
+			&:nth-child(4) {
+				margin-bottom: 0;
+			}
+
+			h4 {
+				font-size: $h4-mobile;
+				margin-bottom: 20px;
+			}
+			li a {
+				font-size: $p-mobile;
+			}
+		}
+	}
+	.footer__part {
+		.fList {
+			&--snd {
+				@include flexbox();
+				@include flex-direction(column);
+			}
+			&--3th {
+				width: 80%;
+				li a i {
+					font-size: 1.7em;
+				}
+			}
+		}
+	}
+	.copyright {
+	    position: relative;
+	    width: 100%;
+	    padding: 20px;
+	    p {
+	    	font-size: 16px;
+	    }
+	}
+} /*End of media max-width(320px);*/	
+
+/*For small screen also*/
+@media all and(min-width: 321px) and(max-width: 420px) {
+	.tuts-wrap {
+		&__tuto {
+		    width: 80%;
+		}
+	}
+}
+@media all and(min-width: 421px) and(max-width: 512px) {
+	.tuts-wrap {
+		&__tuto {
+		    width: 70%;
+		}
+	}
+}
+@media all and(min-width: 512px) and(max-width: 567px) {
+	.tuts-wrap {
+		&__tuto {
+		    width: 70%;
+		    
+		}
+	}
+}
+@media all and(min-width: 567px) and(max-width: 768px) {
+	.tuts-wrap {
+		&__tuto {
+		    width: 50%;
+		    
+		}
+	}
+}
+
+/*@media all and(min-width: 321px) and(max-width: 407px) {
+	.about__card {
+		&__img--mladen {
+			height: calc(100% - 24%);
+		}	
+	}
+}*/
+
+//media query min-width: 321px nad max-width: 768px
+
+@media all and(min-width: 321px) and(max-width: 768px) {
+	//header section 
+	.header {
+		height: 600px;
+		padding: 0;
+	}
+	.main-nav {
+		width: 100%;
+		height: 60px;
+		padding: 0 15px;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		@include transition(background, .3s, ease-in-out);
+		&__logoLinxBox {
+			width: 100%;
+			height: 60px;
+		}
+		&__logo {
+			position: relative;
+			width: 60px;
+			height: 50px;
+		}
+		&__icon-menu {
+		    position: relative;
+		    right: 0%;
+		    width: 40px;
+		    height: 40px;
+		    background: $base-color;
+		    @include transition(right, .3s, linear);
+		    @include border-radius(4px);
+		}
+		&__hamburger {
+		    @include background("../img/menu.svg", center, no-repeat);
+		    width: 40px;
+		    height: 40px;
+		    cursor: pointer;
+		}
+		&__close {
+		    @include background("../img/close.svg", center, no-repeat);
+		    display: none;
+		    width: 40px;
+		    height: 40px;
+		    cursor: pointer;
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		}
+	}
+
+	.animateIcon {
+		right: 12%;
+		@include transition(right, .3s, linear);
+	}
+
+	.bgdNav {
+		background: rgba(0,0,0,.6);
+	}	
+
+	.linx {
+		width: 100%;
+		height: 100vh;
+		background: white;
+		padding: 20px 0 0 0;
+		position: fixed;
+		top: 60px;
+		left: 0;
+		z-index: 100;
+		@include flex-direction(column);
+		@include justify-content(stretch);
+		@include align-items(center);
+		@include transition(all, .3s, ease-in-out);
+		@include transform(translate(100%, 0));
+		&__item {
+			width: 100%;
+			margin-bottom: 10px;
+			font-size: 18px;
+			padding: 10px 0 10px 20px;
+			&--current {
+				background: $base-color;
+			}
+		}
+		&__link {
+			width: 100%;
+		}
+		.search-btn {
+		    position: absolute;
+		    width: 40px;
+		    height: 40px;
+		    top: -50px;
+		    right: 3%;		    
+		    display: none;
+		}
+	}
+
+	.form-search {
+    	width: 100%;
+    	height: 60px;
+		@include justify-content(space-around);
+    	&__input {
+		    padding: 20px;
+		    width: 80%;
+		    font-size: 18px;
+		}
+		&__close {
+			margin-right: 0;
+		}		
+
+	}
+	.box_slider {
+		margin-top: 0;
+	}
+	.box_slider .slider {
+	    width: 100%;
+	    height: 400px;
+	    @include flexbox();
+	    @include justify-content(center);
+	    @include align-items(center);
+	    
+	    div {
+	    	h1 {
+	    		font-size: 3em;
+	    	}
+	    	h3 {
+	    		font-size: 20px;
+	    		padding: 0 15px;
+	    	}
+	    }
+	}
+	.slick-dots li {
+	    position: relative;
+	    display: inline-block;
+	    width: 35px;
+	    height: 35px;
+	    margin: 0 5px;
+	    padding: 0;
+	    cursor: pointer;
+	    button {
+	    	font-size: 0;
+			line-height: 0;
+			display: block;
+			width: 35px;
+			height: 35px;
+			padding: 5px;
+		    &:before {
+		    	line-height: 35px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 35px;
+				height: 35px;
+				content: "";
+				text-align: center;
+				opacity: .77;
+				color: black;
+			}	
+		}
+	}
+	//discription section
+	.discription {
+		width: 100%;
+		height: auto;
+		@include flexbox();
+		@include flex-direction(column);
+	}
+	.dwrap {
+		&__boxText {
+			width: 100%;
+			margin: 20px 0;
+			padding: 0 15px;
+			h3 {
+				font-size: $h4-tablet;
+			}
+			p {
+				font-size: $p-tablet;
+			}
+		}
+	}
+	.dboxImg {
+	    position: relative;
+	    width: 100%;
+	    height: auto;
+	    overflow: hidden;
+	}
+	//features 
+	.features {
+	    width: 100%;
+	    height: auto;
+	    padding: 0 15px;
+	    h3 {
+	    	font-size: $size-h4;
+	    	margin: 20px 0 40px 0;
+	    }
+	}
+
+	.fFullBox {
+	    width: 100%;
+	    height: auto;
+	    margin: 0;
+	    &__box {
+    		width: 100%;
+    		height: auto;
+    		margin: 0;
+    		@include flexbox();
+    		@include flex-direction(column);
+	    }
+	    &__icon {
+		    position: relative;
+		    width: 30px;
+		    height: 30px;
+		    margin-right: 25px;
+		
+		     i {
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    width: 100%;
+			    height: 100%;
+			    color: #b2dbbd;
+			    font-size: 2.2em;
+			}
+		}
+		&__discrb {
+		    width: 100%;
+			 h4 {
+			    margin-bottom: 10px;
+			    font-size: $h4-tablet;
+			    font-weight: bold;
+			}
+			p {
+				font-size: $p-tablet;
+			}
+		}
+		&__part {
+			width: 100%;
+			margin-bottom: 20px;
+			&:nth-child(6) {
+				margin-bottom: 0;
+			}
+		}
+	}
+	//tuts section 
+	.tuts {
+		position: relative;
+		width: 100%;
+		height: auto;
+		padding: 0 15px;
+		h3 {
+			font-size: $h3-tablet;
+			margin: 20px 0 40px 0;
+		}
+	}
+	.tuts-wrap {
+		width: 100%;
+		height: auto;
+		&__tutsBox {
+	    	width: 100%;
+	    	height: auto;
+	    	@include flexbox();
+	    	@include flex-direction(column);
+		}
+		&__tuto {
+		    position: relative;
+		    overflow: hidden;
+		    height: 290px;
+		    margin: 20px 0;
+		    p {
+		    	font-size: 14px;
+		    }
+		}    
+	} 
+
+	.figure {
+		&__link span {
+		    color: black;
+		    font-weight: 400;
+		    text-transform: uppercase;
+		    font-size: 14px;
+		}
+	}
+
+	//aboutUs section 
+	.aboutUs {
+		h3 {
+			font-size: $size-h4;
+			margin: 20px 0 40px 0;
+		}
+	}
+	.wrapper-about {
+		width: 100%;
+		padding-bottom: 40px;
+	}
+
+	.about {
+		@include flexbox();
+		@include flex-direction(column);
+		height: auto;
+
+		&__card {
+			width: 80%;
+			height: 400px;
+			&:nth-child(1) {
+				margin-bottom: 10px;
+				margin-right: 0;
+			}
+			h5 {
+				padding-bottom: 15px;
+			}
+			&__mask {
+				p {
+					font-size: $p-mobile;
+				}
+			}
+			&__img {
+				position: absolute;
+				width: 100%;
+				height: auto;
+			}
+			&__img--mladen {
+				height: calc(100% - 24%);
+			}	
+		}
+	}
+
+	//aboutUs 
+
+	.about__card {
+		&__icons {
+			width: 100%;
+			@include flexbox();
+			@include justify-content(space-around);
+			font-size: 20px;	
+			margin-bottom: 10px;
+		}	
+		&__icon {
+			width: 25px;
+			height: 25px;
+		}	
+	} 
+
+	//contact section
+	.contact {
+	    position: relative;
+	    width: 100%;
+	    height: auto;
+	    padding: 0 15px;
+	    padding-bottom: 40px;
+	    h3 {
+	    	font-size: $h3-tablet;
+	    	margin-top: 20px;
+	    }
+	}
+	.contWrap {
+		width: 100%;
+		height: auto;
+		@include flexbox();
+		@include flex-direction(column);
+		&__box {
+			width: 100%;
+			margin: 20px 0;
+		}
+		&__iconBox {
+			width: 100%;
+			height: 100px;
+		}
+		&__link {
+			width: 40px;
+			height: 40px;
+		}
+		&__icon {
+			font-size: 1.7em;
+		}
+		&__text {
+			font-size: $p-tablet;
+		}
+		&__boxForm {
+			width: 100%;
+		}
+		&__form {
+			width: 100%;
+		}
+		&__input {
+			width: 100%;
+			input {
+				width: 100%;
+				font-size: .9em;
+			}
+		}
+		&__mess {
+			width: 100%;
+			min-width: 100%;
+			font-size: .9em;
+		}
+		&__button {
+			width: 100%;
+		}
+		&__btn {
+			width: 100%;
+			font-size: .9em;
+		}
+	}	
+	//footer section 
+	.footer {
+		height: auto;
+		padding: 40px 15px;
+		&__wrap {
+			width: 100%;
+		}
+		&__box {
+			width: 100%;
+			height: auto;
+			@include flex-direction(column);
+			@include justify-content(space-evenly);
+			@include align-items(center);
+		}
+		&__part {
+			width: 100%;
+			margin-bottom: 20px;
+			&:nth-child(4) {
+				margin-bottom: 0;
+			}
+
+			h4 {
+				font-size: $h4-tablet;
+				margin-bottom: 20px;
+			}
+			li a {
+				font-size: $p-tablet;
+			}
+		}
+	}
+	.footer__part {
+		.fList {
+			&--snd {
+				@include flexbox();
+				@include flex-direction(column);
+			}
+		}
+	}
+	.copyright {
+	    position: relative;
+	    width: 100%;
+	    padding: 20px;
+	    p {
+	    	font-size: 16px;
+	    }
+	}
+
+}/*End of media min-width: 320px nad max-width: 768px;*/
+
+@media all and(min-width: 769px) and(max-width: 980px) {
+	//header section
+	.main-nav {
+		position: relative;
+		width: 100%;
+		height: 100px;
+		@include flexbox();
+		@include justify-content(center);
+			
+		&__logoLinxBox {
+			position: relative;
+			width: 100%;
+			height: 100px;
+			@include flexbox();
+			@include align-items(center);
+			@include justify-content(space-between);
+
+			.linx {
+				position: relative;
+				width: 45%;
+				@include flexbox();
+				@include justify-content(space-around);
+				@include align-items(center);
+				font-size: 1.5em;
+
+				&__link--sliding-middle-out {
+					display: inline-block;
+					position: relative;
+					padding-bottom: 3px;
+				}
+					
+				&__link--sliding-middle-out:after {
+					content: '';
+					display: block;
+					margin: auto;
+					height: 3px;
+					width: 0px;
+					background: transparent;
+					transition: width .3s ease, background-color .3s ease;
+				}
+					
+				&__link--sliding-middle-out:hover:after {
+					width: 100%;
+					background: white;
+				}
+				// this is linx(a)  
+				@include linx($linx-color, none, $linx-hover);
+					
+				a {
+					@include transition(color, .3s, ease-in-out);
+				}
+			}
+		}
+	}
+
+	.box_slider {
+		width: 100%;
+		height: 400px;
+		margin-top: 60px;
+		@include flexbox();
+		@include justify-content(center);
+
+		.slider {
+			width: 80%;
+			height: 400px;
+			@include flexbox();
+			@include justify-content(center);
+			@include align-items(center);
+			
+			.slick-list {
+			    position: relative;
+			    display: block;
+			    overflow: hidden;
+			    margin: 0;
+			    padding: 0;
+			    text-align: center;
+			}
+		}
+	}	
+
+	.box_slider div {
+		h1 {font-size: 4em; color: $linx-color}
+		h3 {font-size: $h3-laptop; font-weight: $font-weight-h3; color: $linx-color}
+	}
+
+	//discription section
+	.discription {
+	    width: 100%;
+	    height: auto;
+	}
+	.dwrap {
+		width: 100%;
+		height: auto;
+		background: $xlight-gray;
+		@include flexbox();
+		@include justify-content(center);
+			
+		&__boxText {
+			width: 80%;
+			height: auto;
+			margin-top: 40px;
+			@include flexbox();
+			@include flex-direction(column);
+			@include justify-content(center);
+				
+			h3 {
+				font-size: $h3-laptop;
+				margin-bottom: 20px;
+				span {
+					color: #8c8c8c;
+					font-weight: 200; 
+				}
+			}
+
+			p {
+				color: #8c8c8c;
+				line-height: 150%;
+				font-size: $p-laptop;
+				span {
+					font-style: italic;
+				}
+			}
+		}
+	}
+	//----------------Features Section----------------------------
+
+.features {
+	width: 100%;
+	height: auto;
+	margin-bottom: 0;
+	@include flexbox();
+	@include justify-content(center);
+	@include flex-direction(column);
+	@include align-items(center);
+	padding: 0 15px;
+	h3 {
+		font-size: $h3-laptop;
+		margin-top: 40px;
+		span {
+			color: #8c8c8c;
+			font-weight: 200;	
+		}
+	}
+}
+
+.fFullBox {
+	width: 100%;
+	height: 500px;
+	margin-top: 40px;
+	@include flexbox();
+	@include justify-content(center);
+	@include align-items(center);
+	@include flex-direction(column);
+	
+	&__box{
+		width: 100%;
+		margin-bottom: 40px;
+		@include flexbox();
+		@include flex-direction(row);
+	}
+}
+.fFullBox {
+	&__part {
+		width: 40%;
+		@include flexbox();
+	}	
+		&__icon {
+			position: relative;
+			width: 60px;
+			height: 60px;
+			margin-right: 10px;
+			
+			i {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				color: $light-gray;
+				font-size: 2.6em;
+			}
+		}
+
+		&__discrb {
+			width: 100%;
+			h4 {
+				margin-bottom: 10px;
+				font-size: $h4-laptop;
+				font-weight: bold;
+			}
+			p {
+				font-size: $p-laptop;
+				color: $text-col;
+			}
+		}
+}
+//---------------Tuts-----------------------------------
+	
+.tuts {
+    position: relative;
+	width: 100%;
+	height: 550px;
+	padding: 0 15px;
+	@include flexbox();
+	@include flex-direction(column);
+	@include align-items(center);
+	background: $light-blue;	
+	z-index: 1;
+		
+	h3 {
+		text-align: center;
+		font-size: $h3-laptop;
+		margin-top: 40px;
+		
+		span {
+			color: #fff;
+			font-weight: 200;
+		}
+	}
+}
+	
+.tuts-wrap {
+	width: 100%;
+	height: 500px;
+	padding-bottom: 40px;
+	@include flexbox();
+	@include justify-content(center);
+	@include align-items(center);	
+	
+	&__tutsBox {
+		width: 100%;
+		height: 400px;
+		@include flexbox();
+		@include flex-direction(row);
+		@include justify-content(space-between);
+		@include align-items(center);	
+	}
+}
+
+
+.figure {
+	&__link {
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    z-index: 3;
+	    visibility: hidden;
+	    cursor: pointer;
+		pointer-events: auto;
+		border: 3px solid black;
+		padding: 7px;
+    	@include transform(translate(50%, 200%));
+		
+		span {
+			color: black;
+			font-weight: $font-weight-h3;
+			text-transform: uppercase;
+
+		}
+	}
+}
+
+.tuts-wrap {
+	&__text {
+		background: #eee;
+		position: absolute;
+		bottom: 0;
+		z-index: 1;
+		padding: 15px;
+
+		p {
+			font-size: 13px;
+		}
+	}		
+}
+//AboutUs 
+.aboutUs {
+	padding-bottom: 40px;
+	h3 {
+		font-size: 26px;
+		margin-bottom: 40px;
+	}
+}
+
+//contact section
+.contact {
+	    position: relative;
+	    width: 100%;
+	    height: auto;
+	    padding: 0 15px;
+	    padding-bottom: 40px;
+	    h3 {
+	    	font-size: $h3-laptop;
+	    	margin: 40px 0;
+	    }
+	}
+	.contWrap {
+		width: 100%;
+		height: auto;
+		@include flexbox();
+		&__box {
+			width: 100%;
+			margin: 20px 0;
+		}
+		&__iconBox {
+			width: 80%;
+			height: 100px;
+		}
+		&__link {
+			width: 50px;
+			height: 50px;
+		}
+		&__icon {
+			font-size: 2em;
+		}
+		&__text {
+			font-size: $p-laptop;
+			width: 80%;
+		}
+		&__boxForm {
+			width: 80%;
+		}
+		&__form {
+			width: 100%;
+		}
+		&__input {
+			width: 100%;
+			input {
+				width: 100%;
+				font-size: .9em;
+			}
+		}
+		&__mess {
+			width: 100%;
+			min-width: 100%;
+			font-size: .9em;
+		}
+		&__button {
+			width: 100%;
+		}
+		&__btn {
+			width: 100%;
+			font-size: .9em;
+		}
+	}	
+	//footer section 
+	.footer {
+		height: auto;
+		padding: 0 15px;
+		&__wrap {
+			width: 100%;
+		}
+		&__box {
+			width: 100%;
+			height: 400px;
+			@include flexbox();
+			@include justify-content(space-evenly);
+			@include align-items(center);
+		}
+		&__part {
+			width: 100%;
+			margin-bottom: 0;
+			&:nth-child(4) {
+				margin-bottom: 0;
+			}
+
+			h4 {
+				font-size: $h4-tablet;
+				margin-bottom: 20px;
+			}
+			li a {
+				font-size: $p-tablet;
+			}
+		}
+	}
+	.footer__part {
+		.fList {
+			&--snd {
+				@include flexbox();
+				@include flex-direction(row);
+				@include justify-content(space-around);
+				@include align-items(last baseline);
+			}
+			&--3th {
+				width: 70%;
+				li a i {
+					font-size: 1.6em;
+				}
+			}
+		}
+	}
+	.copyright {
+	    position: relative;
+	    width: 100%;
+	    padding: 20px;
+	    p {
+	    	font-size: 16px;
+	    }
+	}
+} //End of @media min-width: 769px and max-width: 980px 
+
+@media all and(min-width: 980px) {
+	.linx {
+		position: relative;
+		width: 45%;
+		@include flexbox();
+		@include justify-content(space-between);
+		@include align-items(flex-start);
+	}
+	.main-nav__hamburger {
+		display: none;
+	}
+	.wrap-tuts__tuto {
+		width: 30%;
+		height: 290px; 
+	}
+	.wrapper-about {
+		@include flexbox();
+		height: 600px;
+	}	
+	.about {
+		&__card {
+			width: 40%;
+				&__icons {
+					width: 65%;
+					@include flexbox();
+					@include justify-content(space-around);
+					font-size: 20px;	
+				}
+				&__icon {
+					width: 30px;
+					height: 30px;
+				}		
+		}
+	}
+
+} //End of @media min-width: 980px 
+
+@media all and(max-width: 1210px) {
+	.about {
+		width: 100%;
+	}
+}
+
+@media all and(min-width: 769px) and (max-width: 1035px) {
+	.about {
+		&__card {
+			width: 40%;
+		}
+	}
+}

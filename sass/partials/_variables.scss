@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:200i,400,400i,700');
+
+//colors
+
+$base-color: #f3ffbd;
+
+$footer-bgd: #042c3c;
+
+$light-blue: #70c1b3;
+$light-gray: #b2dbbd;
+$xlight-gray: #efefef;
+$light-red: #ff1654;
+$gray-alpha: #a8cace4d;
+$linx-color: #0F76A2;
+$linx-hover: #23527c;
+
+//fonts
+$text-col: #8c8c8c;
+$size-h1: 6em;
+$size-h3: 30px;
+$size-h4: 20px;
+$size-p: 15px;
+$font-weight-h3: 400; 
+$base-font: 'Titillium Web', sans-serif;
+
+
+//size for mobile 
+$p-mobile: 14px;
+$h4-mobile: 16px;
+
+//size for teblet 
+$p-tablet: 15px;
+$h4-tablet: 17px;
+$h3-tablet: 20px;
+
+//size for lap-top
+$p-laptop: 16px;
+$h4-laptop: 22px;
+$h3-laptop: 26px;
+
+//this is retina for media query
+$retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
